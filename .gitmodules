@@ -1,0 +1,9 @@
+[submodule "cw-godot-advanced-fps"]
+	path = cw-godot-advanced-fps
+	url = https://github.com/mxd1760/cw-godot-advanced-fps
+[submodule "cw-godot-intermediate-platformer"]
+	path = cw-godot-intermediate-platformer
+	url = https://github.com/mxd1760/cw-godot-intermediate-platformer
+[submodule "cw_godot-basics-shooter"]
+	path = cw_godot-basics-shooter
+	url = https://github.com/mxd1760/cw_godot-basics-shooter
