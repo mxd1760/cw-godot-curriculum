@@ -9,8 +9,8 @@ const SENS_Y = 0.01
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		rotate(Vector3.UP,event.relative.x*SENS_X)
-		camera_3d.rotate(Vector3.RIGHT,event.relative.y*SENS_Y)
+		rotate(Vector3.UP,-event.relative.x*SENS_X)
+		camera_3d.rotate(Vector3.RIGHT,-event.relative.y*SENS_Y)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
