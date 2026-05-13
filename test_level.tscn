@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cr4ces4dt0mtr"]
 
 [ext_resource type="Script" uid="uid://bmvr4p21rml3k" path="res://player.gd" id="1_gojnm"]
+[ext_resource type="ArrayMesh" uid="uid://b37mv335t2ys1" path="res://target_dummy.res" id="2_1c2mv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hsoxx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -18,6 +19,15 @@ glow_enabled = true
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hsoxx"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gojnm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7g2b"]
+size = Vector3(0.8006897, 1.5098267, 0.4623413)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ptq8"]
+size = Vector3(2.4276123, 0.33917236, 0.5041504)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sb12i"]
+size = Vector3(0.53656006, 0.736969, 0.43978882)
 
 [node name="Test level" type="Node3D" unique_id=2110805494]
 
@@ -77,3 +87,23 @@ size = Vector3(13.426983, 2.2047272, 0.88726807)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.5079184, -0.6223779, -2.7271485)
 use_collision = true
 size = Vector3(13.426983, 2.2047272, 0.88726807)
+
+[node name="Enemy" type="CharacterBody3D" parent="." unique_id=1495534848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.886924)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy" unique_id=1361991495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00035095215, -0.379364, -0.0008239746)
+shape = SubResource("BoxShape3D_f7g2b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Enemy" unique_id=223754967]
+transform = Transform3D(0.62918323, 0, 0, 0, 0.62918323, 0, 0, 0, 0.62918323, 0, 0, 0)
+mesh = ExtResource("2_1c2mv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Enemy" unique_id=528550032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0036010742, 0.47964126, -0.009399414)
+shape = SubResource("BoxShape3D_4ptq8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Enemy" unique_id=468003636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015472412, 0.9840355, -0.005508423)
+shape = SubResource("BoxShape3D_sb12i")
