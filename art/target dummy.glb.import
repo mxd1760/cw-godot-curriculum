@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dhljhs22bpgt3"
-path="res://.godot/imported/target dummy.glb-2df7570c1e68c19faaedd9e400ee9d73.scn"
+path="res://.godot/imported/target dummy.glb-8f79e2d870c793d614a3d3c3b6f795ce.scn"
 
 [deps]
 
-source_file="res://target dummy.glb"
-dest_files=["res://.godot/imported/target dummy.glb-2df7570c1e68c19faaedd9e400ee9d73.scn"]
+source_file="res://art/target dummy.glb"
+dest_files=["res://.godot/imported/target dummy.glb-8f79e2d870c793d614a3d3c3b6f795ce.scn"]
 
 [params]
 
@@ -45,7 +45,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://target_dummy.res",
+"save_to_file/fallback_path": "res://art/target_dummy.res",
 "save_to_file/path": "uid://dl7p5wrbp65o4"
 }
 }
