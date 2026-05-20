@@ -3,7 +3,7 @@ extends Node3D
 class_name BaseGun
 
 
-var ammo:int:
+var ammo:int=10:
 	get = get_ammo , set = set_ammo
 func set_ammo(v):
 	ammo = v
@@ -11,9 +11,9 @@ func get_ammo():
 	return ammo
 
 @export var weapon_profile:WeaponProfile
-@export var fire_delay = 1
-@export var reload_delay = 3
-@export var magazine_size = 10
+@export var fire_delay:float = 1
+@export var reload_delay:float = 3
+@export var magazine_size:int = 10
 
 
 var can_shoot = true:
@@ -42,12 +42,3 @@ func reload():
 	reloading=false
 	ammo=magazine_size
 	
-func swap_next_ammo_type():
-	if weapon_profile:
-		var dt = weapon_profile.damage_type
-		weapon_profile.damage_type = ((dt+1)%WeaponProfile.DamageType.size()) as WeaponProfile.DamageType
-
-func swap_prev_ammo_type():
-	if weapon_profile:
-		var dt = weapon_profile.damage_type
-		weapon_profile.damage_type = (dt-1)%WeaponProfile.DamageType.size() as WeaponProfile.DamageType

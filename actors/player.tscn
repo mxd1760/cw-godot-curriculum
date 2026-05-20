@@ -26,3 +26,4 @@ mesh = SubResource("CapsuleMesh_gojnm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6011178, 0)
 
 [node name="WeaponAttatchPoint" type="Node3D" parent="Camera3D" unique_id=325045252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23955894, -0.14920461, -0.53746855)
