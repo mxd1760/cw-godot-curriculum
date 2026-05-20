@@ -14,11 +14,13 @@ var weapon_idx = 0:
 		if weapon_idx != v:
 			weapon_idx = v
 			setup_weapon()
+@onready var ammo_counter: Label = $CanvasLayer/AmmoCounter
 
 func setup_weapon():
 	if weapon_attatch_point.get_child_count()!=0:
 		weapon_attatch_point.get_child(0).queue_free()
 	var weapon = weapon_list[weapon_idx].instantiate()
+	weapon.ammo_counter = ammo_counter
 	weapon_attatch_point.add_child(weapon)
 			
 			
@@ -74,10 +76,14 @@ func _physics_process(delta: float) -> void:
 		weapon_idx= (weapon_idx+1)%weapon_list.size()
 	if Input.is_action_just_pressed("swap_prev_gun"):
 		weapon_idx= (weapon_idx-1)%weapon_list.size()
+	if Input.is_action_just_pressed("pick_gun_1"):
+		if weapon_list.size()>=1:
+			weapon_idx = 0 #1-1
+	if Input.is_action_just_pressed("pick_gun_2"):
+		if weapon_list.size()>=2:
+			weapon_idx = 1 #2-1
+	if Input.is_action_just_pressed("pick_gun_3"):
+		if weapon_list.size()>=3:
+			weapon_idx = 2 #3-1
 	if Input.is_action_pressed("shoot"):
 		weapon_attatch_point.get_child(0).shoot()
-	if Input.is_action_just_pressed("swap_next_ammo"):
-		weapon_attatch_point.get_child(0).swap_next_ammo_type()
-	if Input.is_action_just_pressed("swap_prev_ammo"):
-		weapon_attatch_point.get_child(0).swap_prev_ammo_type()
-	

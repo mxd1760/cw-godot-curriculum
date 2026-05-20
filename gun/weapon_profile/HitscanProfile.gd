@@ -19,7 +19,7 @@ func fire(source:Node3D,direction:Vector3):
 			var body = results.get("collider")
 			end = results.get("position")
 			if body.has_method("deal_damage"):
-				body.deal_damage(10,end)
+				body.deal_damage(base_damage,end)
 		create_simple_tracer(source.get_tree().root,start,end)
 	pass
 

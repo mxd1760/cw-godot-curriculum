@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://deom3t7olpnjn"]
 
 [ext_resource type="PackedScene" uid="uid://caywgv08np5lc" path="res://gun/base_gun.tscn" id="1_thah4"]
-[ext_resource type="Script" uid="uid://d1hlsky4ctsju" path="res://gun/HitscanProfile.gd" id="2_40ggj"]
+[ext_resource type="Script" uid="uid://d1hlsky4ctsju" path="res://gun/weapon_profile/HitscanProfile.gd" id="2_40ggj"]
 
 [sub_resource type="Resource" id="Resource_il3fr"]
 script = ExtResource("2_40ggj")
@@ -23,6 +23,8 @@ height = 0.3
 
 [node name="shotgun" unique_id=1730485096 instance=ExtResource("1_thah4")]
 weapon_profile = SubResource("Resource_il3fr")
+fire_delay = 0.7
+reload_delay = 1.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=106130480]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.02, 0, 0)

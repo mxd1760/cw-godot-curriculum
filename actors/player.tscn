@@ -27,3 +27,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6011178, 0)
 
 [node name="WeaponAttatchPoint" type="Node3D" parent="Camera3D" unique_id=325045252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23955894, -0.14920461, -0.53746855)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=549238659]
+
+[node name="AmmoCounter" type="Label" parent="CanvasLayer" unique_id=324350996]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 70
+text = "100/100"
