@@ -5,9 +5,6 @@ extends Area3D
 var base_damage = 10
 
 func _ready():
-	monitoring = false
-	await get_tree().create_timer(0.01).timeout
-	monitoring = true
 	await get_tree().create_timer(LIFETIME).timeout
 	queue_free()
 

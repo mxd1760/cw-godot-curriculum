@@ -5,7 +5,6 @@ class_name HitscanProfile
 @export var spread_degrees = 5
 @export var casts_per_shot = 1
 @export var cast_range = 100
-@export var tracer_lifetime = 0.25
 
 func fire(source:Node3D,direction:Vector3):
 	for i in range(casts_per_shot):
@@ -28,6 +27,8 @@ func raycast(source:Node3D,start:Vector3,end:Vector3):
 	var query = PhysicsRayQueryParameters3D.create(start,end)
 	query.collide_with_bodies=true
 	return space_state.intersect_ray(query)
+
+@export var tracer_lifetime = 0.25
 
 func create_simple_tracer(root,start,end):
 	var immediate_mesh = ImmediateMesh.new()

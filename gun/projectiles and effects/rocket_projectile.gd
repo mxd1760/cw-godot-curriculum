@@ -1,6 +1,5 @@
 extends Area3D
 
-
 @export var speed:int = 30
 @export var explosion: PackedScene
 @onready var forward = -basis.z

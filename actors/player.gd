@@ -6,6 +6,9 @@ const JUMP_VELOCITY = 4.5
 const SENS_X = 0.01
 const SENS_Y = 0.01
 @onready var camera_3d: Camera3D = $Camera3D
+
+
+@onready var ammo_counter: Label = $CanvasLayer/AmmoCounter		
 @onready var weapon_attatch_point: Node3D = $Camera3D/WeaponAttatchPoint
 
 @export var weapon_list: Array[PackedScene]
@@ -14,7 +17,6 @@ var weapon_idx = 0:
 		if weapon_idx != v:
 			weapon_idx = v
 			setup_weapon()
-@onready var ammo_counter: Label = $CanvasLayer/AmmoCounter
 
 func setup_weapon():
 	if weapon_attatch_point.get_child_count()!=0:
@@ -23,7 +25,7 @@ func setup_weapon():
 	weapon.ammo_counter = ammo_counter
 	weapon_attatch_point.add_child(weapon)
 			
-			
+
 func _ready():
 	toggle_mouse_capture()
 	setup_weapon()
