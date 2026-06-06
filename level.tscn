@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0f0e7d5g2g7t"]
 
 [ext_resource type="Script" uid="uid://cobjy7bobetgu" path="res://level.gd" id="1_vonw3"]
+[ext_resource type="Texture2D" uid="uid://cne2tdqaaqjfc" path="res://Space.png" id="2_0b4ue"]
 [ext_resource type="Texture2D" uid="uid://dldw46kkwr1hf" path="res://superman.png" id="2_oi3di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
@@ -8,6 +9,10 @@ size = Vector2(294.44977, 184.29587)
 
 [node name="Level" type="Node2D" unique_id=1543657833]
 script = ExtResource("1_vonw3")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1809847528]
+position = Vector2(547, 317)
+texture = ExtResource("2_0b4ue")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1581438247]
 position = Vector2(92.00001, 174)
