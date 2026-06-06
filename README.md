@@ -1,4 +1,4 @@
-# CW Godot Intermediate Plantformer
+# CW Godot Intermediate Platformer
 
 This is a godot demo game showing off intermediate features such as node composition, scene reuse, ui basics, collision objecs, basic game logic scripts, and level transitions.
 
