@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bnvfippkk684l"]
+
+[ext_resource type="PackedScene" uid="uid://caywgv08np5lc" path="res://gun/base_gun.tscn" id="1_vfvja"]
+[ext_resource type="PackedScene" uid="uid://dy5eidybf48y5" path="res://gun/projectiles and effects/rocket_projectile.tscn" id="2_c2pqj"]
+[ext_resource type="Script" uid="uid://nfi4566pntsx" path="res://gun/weapon_profile/ProjectileProfile.gd" id="2_f4skl"]
+
+[sub_resource type="Resource" id="Resource_c2pqj"]
+script = ExtResource("2_f4skl")
+projectile_scene = ExtResource("2_c2pqj")
+metadata/_custom_type_script = "uid://nfi4566pntsx"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3iqrl"]
+albedo_color = Color(0.2266632, 0.33048558, 0.17169857, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_t7j4i"]
+material = SubResource("StandardMaterial3D_3iqrl")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.5
+
+[node name="RocketLauncher" unique_id=1730485096 instance=ExtResource("1_vfvja")]
+weapon_profile = SubResource("Resource_c2pqj")
+base_damage = 50
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=1999972567]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_t7j4i")

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://v835ugbxusfk"]
+
+[ext_resource type="Script" uid="uid://bmvr4p21rml3k" path="res://actors/player.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hsoxx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7g2b"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gojnm"]
+material = SubResource("StandardMaterial3D_f7g2b")
+
+[node name="player" type="CharacterBody3D" unique_id=1816999416]
+collision_layer = 8
+collision_mask = 15
+wall_min_slide_angle = 1.6336281
+script = ExtResource("1_4flbx")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1097787387]
+shape = SubResource("CapsuleShape3D_hsoxx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=595507615]
+mesh = SubResource("CapsuleMesh_gojnm")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2034981170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6011178, 0)
+
+[node name="WeaponAttatchPoint" type="Node3D" parent="Camera3D" unique_id=325045252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23955894, -0.14920461, -0.53746855)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=549238659]
+
+[node name="AmmoCounter" type="Label" parent="CanvasLayer" unique_id=324350996]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 70
+text = "100/100"

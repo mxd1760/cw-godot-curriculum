@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://deom3t7olpnjn"]
+
+[ext_resource type="PackedScene" uid="uid://caywgv08np5lc" path="res://gun/base_gun.tscn" id="1_thah4"]
+[ext_resource type="Script" uid="uid://d1hlsky4ctsju" path="res://gun/weapon_profile/HitscanProfile.gd" id="2_40ggj"]
+
+[sub_resource type="Resource" id="Resource_il3fr"]
+script = ExtResource("2_40ggj")
+spread_degrees = 20
+casts_per_shot = 10
+metadata/_custom_type_script = "uid://d1hlsky4ctsju"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40ggj"]
+albedo_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+metallic = 0.45
+metallic_specular = 0.43
+roughness = 0.23
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_il3fr"]
+material = SubResource("StandardMaterial3D_40ggj")
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.3
+
+[node name="shotgun" unique_id=1730485096 instance=ExtResource("1_thah4")]
+weapon_profile = SubResource("Resource_il3fr")
+fire_delay = 0.7
+reload_delay = 1.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=106130480]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.02, 0, 0)
+mesh = SubResource("CylinderMesh_il3fr")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="1" unique_id=1375080787]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.02, 0, 0)
+mesh = SubResource("CylinderMesh_il3fr")

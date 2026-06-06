@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://clqnoiovuwkod"]
+
+[ext_resource type="ArrayMesh" uid="uid://dl7p5wrbp65o4" path="res://art/target_dummy.res" id="1_7k104"]
+[ext_resource type="Script" uid="uid://cul1sdok6f4k8" path="res://actors/enemy.gd" id="1_c6xed"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7g2b"]
+size = Vector3(0.8006897, 1.5098267, 0.4623413)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ptq8"]
+size = Vector3(2.4276123, 0.33917236, 0.5041504)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sb12i"]
+size = Vector3(0.53656006, 0.736969, 0.43978882)
+
+[node name="Enemy" type="CharacterBody3D" unique_id=270218917]
+script = ExtResource("1_c6xed")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=960427076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00035095215, -0.379364, -0.0008239746)
+shape = SubResource("BoxShape3D_f7g2b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=768717017]
+transform = Transform3D(0.62918323, 0, 0, 0, 0.62918323, 0, 0, 0, 0.62918323, 0, 0, 0)
+mesh = ExtResource("1_7k104")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1904694432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0036010742, 0.47964126, -0.009399414)
+shape = SubResource("BoxShape3D_4ptq8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1309577047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015472412, 0.9840355, -0.005508423)
+shape = SubResource("BoxShape3D_sb12i")

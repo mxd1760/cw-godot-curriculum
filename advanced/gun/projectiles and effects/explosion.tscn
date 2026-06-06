@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bl1lqiral03ee"]
+
+[ext_resource type="Script" uid="uid://b31aq2xrta5i1" path="res://gun/projectiles and effects/explosion.gd" id="1_m1i8i"]
+[ext_resource type="Texture2D" uid="uid://138u6icswjbh" path="res://art/an-explosion-with-smoke-and-fire-on-a-transparent-background-png-2926984176.png" id="2_c3w6k"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vxas0"]
+radius = 6.712724
+
+[node name="Explosion" type="Area3D" unique_id=366910355]
+collision_layer = 0
+collision_mask = 15
+script = ExtResource("1_m1i8i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=902469808]
+shape = SubResource("SphereShape3D_vxas0")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=679876363]
+pixel_size = 0.025
+billboard = 1
+texture = ExtResource("2_c3w6k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
