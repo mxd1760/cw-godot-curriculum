@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bhvs7tshcr2k1"]
+
+[ext_resource type="Texture2D" uid="uid://cu18dmuj2e2jx" path="res://art/Mossy Rocks.png" id="1_mi635"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
+size = Vector2(344, 63)
+
+[node name="platform" type="StaticBody2D" unique_id=60697856]
+scale = Vector2(1.0862377, 1.0862377)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1636962785]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_ihfcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1887256996]
+texture = ExtResource("1_mi635")

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dq0qumtkmhjtr"]
+
+[ext_resource type="PackedScene" uid="uid://djosqtemyc5l3" path="res://objects/ui.tscn" id="1_5722l"]
+[ext_resource type="PackedScene" uid="uid://d0uy88btut5r5" path="res://objects/door.tscn" id="2_ilhis"]
+[ext_resource type="PackedScene" uid="uid://cs5ujllhhre6d" path="res://objects/floor.tscn" id="3_ep78u"]
+[ext_resource type="PackedScene" uid="uid://ddbbu1yyodct7" path="res://objects/player.tscn" id="4_dfjjl"]
+[ext_resource type="PackedScene" uid="uid://oiu0ijwbwlfm" path="res://objects/idol.tscn" id="5_at1ld"]
+[ext_resource type="Texture2D" uid="uid://dyougtd1sww35" path="res://art/background 2.png" id="6_ilhis"]
+
+[node name="level 2" type="Node2D" unique_id=704510939]
+
+[node name="UI" parent="." unique_id=1049090287 instance=ExtResource("1_5722l")]
+
+[node name="Door" parent="." unique_id=1137603562 instance=ExtResource("2_ilhis")]
+position = Vector2(1039, 476.00003)
+
+[node name="floor" parent="." unique_id=1595863731 instance=ExtResource("3_ep78u")]
+position = Vector2(555, 706.00006)
+
+[node name="Player" parent="." unique_id=974458151 instance=ExtResource("4_dfjjl")]
+position = Vector2(241, 389)
+
+[node name="idol" parent="." unique_id=289983958 instance=ExtResource("5_at1ld")]
+position = Vector2(510, 281)
+
+[node name="background" type="Sprite2D" parent="." unique_id=761839813]
+z_index = -2
+position = Vector2(624.7356, 379.75)
+scale = Vector2(1.8924794, 1.8924794)
+texture = ExtResource("6_ilhis")
