@@ -2,4 +2,4 @@
 
 This is a simple game that uses the bare minimum of godot nodes and some fairly streight forward coding to allow for anybody to make their first godot game even without game dev or coding experience.
 
-![Game Screenshot](./Screenshot 2026-06-06 174059.png)
+![Game Screenshot](/Screenshot 2026-06-06 174059.png)
