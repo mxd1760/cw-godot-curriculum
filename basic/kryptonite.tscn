@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cx1b0ucmec15x"]
+
+[ext_resource type="Texture2D" uid="uid://dow22v8s6e2b0" path="res://kryptonite.png" id="1_558qq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f2txt"]
+radius = 114.804016
+
+[node name="Kryptonite" type="Sprite2D" unique_id=1602920635]
+scale = Vector2(0.39898992, 0.3989899)
+texture = ExtResource("1_558qq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=601802371]
+position = Vector2(1.6836339, 1.2531646)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=889386825]
+shape = SubResource("CircleShape2D_f2txt")
