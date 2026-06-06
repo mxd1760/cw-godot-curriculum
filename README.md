@@ -6,6 +6,6 @@ This is a collection of godot games and a google doc describing how to go throug
 
 This consists of 3 different projects:
 
-- [basic shooter](./basics/README.md)
+- [basic shooter](./basic/README.md)
 - [intermediate platformer](./intermediate/README.md)
 - [advanced FPS](./advanced/README.md)
